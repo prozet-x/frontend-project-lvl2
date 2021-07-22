@@ -4,6 +4,8 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      
       - name: preparing
         run: npm i --save-dev jest
         
