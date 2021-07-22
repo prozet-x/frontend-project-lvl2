@@ -1,0 +1,8 @@
+{
+  "host1": "hexlet.io",
+  "timeout1": 50,
+  "proxy1": "123.234.53.22",
+  "follow1": false,
+  "pres1": "Dima",
+  "old1": true
+}
