@@ -1,0 +1,8 @@
+name: tests
+on: push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: runnig tests
+        run: NODE_OPTIONS=--experimental-vm-modules npx jest
