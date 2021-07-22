@@ -9,5 +9,8 @@ jobs:
       - name: preparing
         run: npm i --save-dev jest
         
+      - name: preparing 2
+        run: npx ci
+        
       - name: runnig tests
         run: npx jest
