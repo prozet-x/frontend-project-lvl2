@@ -13,4 +13,4 @@ jobs:
         run: npx ci
         
       - name: runnig tests
-        run: npx jest
+        run: NODE_OPTIONS=--experimental-vm-modules npx jest
