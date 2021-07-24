@@ -31,7 +31,7 @@ export default (filePath1, filePath2) => {
       .concat(res.split('\n').map((str) => '  '.concat(str)).join('\n'))
       .concat('\n}');
   }
-  console.log(res);
+  // console.log(res);
   return res;
 };
 
