@@ -4,3 +4,4 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/aec0c10a7e0b529615cc/test_coverage)](https://codeclimate.com/github/prozet-x/frontend-project-lvl2/test_coverage)
 [![Build Status](https://travis-ci.com/prozet-x/frontend-project-lvl2.svg?branch=main)](https://travis-ci.com/prozet-x/frontend-project-lvl2)
 https://asciinema.org/a/lajAw0m30jJUIFFDZSYMg9DIN
+https://asciinema.org/a/8Il9wwDiMiZP2Vbpjz0g5TcWv
