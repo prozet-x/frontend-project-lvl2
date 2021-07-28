@@ -2,10 +2,10 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/prozet-x/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/prozet-x/frontend-project-lvl2/actions)",
-  "main": "./src/gendiff.js",
+  "main": "./gendiff.js",
   "type": "module",
   "bin": {
-    "gendiff": "src/gendiff.js"
+    "gendiff": "./gendiff.js"
   },
   "scripts": {
     "test": "jest"
