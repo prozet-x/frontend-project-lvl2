@@ -1,42 +1,6 @@
-// import { access } from 'fs';
 import _ from 'lodash';
-// import path from 'path';
 import parse from './parsers.js';
-
-/* export default (filePath1, filePath2) => {
-  const data1 = parse(filePath1);
-  const data2 = parse(filePath2);
-  const keys = _.uniq(_.concat(Object.keys(data1), Object.keys(data2))).sort();
-  let res = keys.reduce((str, key) => {
-    const in1 = _.has(data1, key);
-    const in2 = _.has(data2, key);
-    let innerStr = str;
-    if (in1 && in2) {
-      if (data1[key] === data2[key]) {
-        innerStr += `  ${key}: ${data1[key]}\n`;
-      } else {
-        innerStr += `- ${key}: ${data1[key]}\n`;
-        innerStr += `+ ${key}: ${data2[key]}\n`;
-      }
-    } else if (in1 && !in2) {
-      innerStr += `- ${key}: ${data1[key]}\n`;
-    } else if (!in1 && in2) {
-      innerStr += `+ ${key}: ${data2[key]}\n`;
-    }
-    return innerStr;
-  }, '');
-  res = res.trimEnd();
-  // res = _.trim(res);
-  if ((path.extname(filePath1) === '.yml')
-  || (path.extname(filePath2) === '.yml')
-  || (path.extname(filePath1) === '.yaml') || (path.extname(filePath2) === '.yaml')) {
-    res = '{\n'
-      .concat(res.split('\n').map((str) => '  '.concat(str)).join('\n'))
-      .concat('\n}');
-  }
-  // console.log(res);
-  return res;
-}; */
+import getFormattedResult from '../formatters/index.js';
 
 const objToArr = (obj) => {
   const keys = Object.keys(obj);
@@ -47,7 +11,7 @@ const objToArr = (obj) => {
   return res;
 };
 
-export default (filePath1, filePath2) => {
+const getDiff = (filePath1, filePath2) => {
   const getDiffs = (obj1, obj2) => {
     const keys = _.uniq(_.concat(Object.keys(obj1), Object.keys(obj2))).sort();
     const res = keys.reduce((arr, key) => {
@@ -88,40 +52,10 @@ export default (filePath1, filePath2) => {
   const data2 = parse(filePath2);
   const result = getDiffs(data1, data2);
 
-  /* const keys = _.uniq(_.concat(Object.keys(data1), Object.keys(data2))).sort();
-  let res = keys.reduce((str, key) => {
-    const in1 = _.has(data1, key);
-    const in2 = _.has(data2, key);
-    let innerStr = str;
-    if (in1 && in2) {
-      if (data1[key] === data2[key]) {
-        innerStr += `  ${key}: ${data1[key]}\n`;
-      } else {
-        innerStr += `- ${key}: ${data1[key]}\n`;
-        innerStr += `+ ${key}: ${data2[key]}\n`;
-      }
-    } else if (in1 && !in2) {
-      innerStr += `- ${key}: ${data1[key]}\n`;
-    } else if (!in1 && in2) {
-      innerStr += `+ ${key}: ${data2[key]}\n`;
-    }
-    return innerStr;
-  }, '');
-  res = res.trimEnd();
-  if ((path.extname(filePath1) === '.yml')
-  || (path.extname(filePath2) === '.yml')
-  || (path.extname(filePath1) === '.yaml') || (path.extname(filePath2) === '.yaml')) {
-    res = '{\n'
-      .concat(res.split('\n').map((str) => '  '.concat(str)).join('\n'))
-      .concat('\n}');
-  }
-  // console.log(res); */
   return result;
 };
 
-/* export const YMLDiff = (filePath1, filePath2) => {
-  const yml1 = yaml.load(fs.readFileSync(filePath1, 'utf8'));
-  const yml2 = yaml.load(fs.readFileSync(filePath2, 'utf8'));
-  console.log(yml1['old']);
-  console.log(yml2);
-}; */
+export default (filePath1, filePath2, format) => {
+  const dif = getDiff(filePath1, filePath2);
+  return getFormattedResult(dif, format);
+};

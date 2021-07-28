@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
-import diff from './src/diff.js';
-import * as formatters from './src/formatters.js';
+import makeDiff from './src/diff.js';
 
 const program = new Command();
 program
@@ -10,12 +9,15 @@ program
   .option('-f, --format [type]', 'output format', 'stylish')
   .arguments('<filepath1> <filepath2>')
   .action((filepath1, filepath2, options) => {
-    const dif = diff(filepath1, filepath2);
-    if (options.format === 'stylish') {
-      formatters.stylish(dif);
-    } else {
-      console.log('Bad output format!');
+    const result = (options.format !== 'stylish') && (options.format !== 'plain')
+      ? 'Bad formatter name!'
+      : makeDiff(filepath1, filepath2, options.format);
+    /* if ((options.format !== 'stylish') && (options.format !== 'plain')) {
+      return 'Bad formatter name!';
     }
+    const result = makeDiff(filepath1, filepath2, options.format); */
+    console.log(result);
+    return result;
   });
 
 program.parse(process.argv);

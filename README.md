@@ -5,4 +5,5 @@
 [![Build Status](https://travis-ci.com/prozet-x/frontend-project-lvl2.svg?branch=main)](https://travis-ci.com/prozet-x/frontend-project-lvl2)
 https://asciinema.org/a/lajAw0m30jJUIFFDZSYMg9DIN
 https://asciinema.org/a/8Il9wwDiMiZP2Vbpjz0g5TcWv
-https://asciinema.org/a/ZowCcULOptPAHWWpyLzVhl0bh
+https://asciinema.org/a/ZowCcULOptPAHWWpyLzVhl0bhgit
+https://asciinema.org/a/WOAp4YR4dnBjbK42Or0XPfWx8
