@@ -21,7 +21,7 @@ const getDiff = (filePath1, filePath2) => {
         if ((typeof obj1[key] === 'object') && (obj1[key] !== null) && (typeof obj2[key] !== 'object')) {
           arr.push(['-', key, objToArr(obj1[key])]);
           arr.push(['+', key, obj2[key]]);
-        } else if ((typeof obj1[key] !== 'object') && (typeof obj2[key] === 'object') && (obj2[key !== null])) {
+        } else if ((typeof obj1[key] !== 'object') && (typeof obj2[key] === 'object') && (obj2[key] !== null)) {
           arr.push(['-', key, obj1[key]]);
           arr.push(['+', key, objToArr(obj2[key])]);
         } else if (((typeof obj1[key] === 'object') && (typeof obj2[key] === 'object'))) {
