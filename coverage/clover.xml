@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1627555364416" clover="3.2.0">
-  <project timestamp="1627555364416" name="All files">
-    <metrics statements="92" coveredstatements="90" conditionals="73" coveredconditionals="69" methods="21" coveredmethods="21" elements="186" coveredelements="180" complexity="0" loc="92" ncloc="92" packages="2" files="6" classes="6"/>
+<coverage generated="1627556778613" clover="3.2.0">
+  <project timestamp="1627556778613" name="All files">
+    <metrics statements="90" coveredstatements="88" conditionals="73" coveredconditionals="69" methods="21" coveredmethods="21" elements="184" coveredelements="178" complexity="0" loc="90" ncloc="90" packages="2" files="6" classes="6"/>
     <package name="formatters">
       <metrics statements="51" coveredstatements="51" conditionals="37" coveredconditionals="35" methods="14" coveredmethods="14"/>
       <file name="index.js" path="/home/prozex/frontend-project-lvl2/formatters/index.js">
@@ -69,45 +69,43 @@
       </file>
     </package>
     <package name="src">
-      <metrics statements="41" coveredstatements="39" conditionals="36" coveredconditionals="34" methods="7" coveredmethods="7"/>
+      <metrics statements="39" coveredstatements="37" conditionals="36" coveredconditionals="34" methods="7" coveredmethods="7"/>
       <file name="diff.js" path="/home/prozex/frontend-project-lvl2/src/diff.js">
-        <metrics statements="36" coveredstatements="35" conditionals="30" coveredconditionals="29" methods="6" coveredmethods="6"/>
+        <metrics statements="34" coveredstatements="33" conditionals="30" coveredconditionals="29" methods="6" coveredmethods="6"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="21" type="stmt"/>
-        <line num="7" count="21" type="stmt"/>
-        <line num="8" count="27" type="cond" truecount="2" falsecount="0"/>
-        <line num="9" count="27" type="stmt"/>
-        <line num="11" count="21" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
+        <line num="7" count="27" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="21" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
+        <line num="13" count="21" type="stmt"/>
+        <line num="15" count="21" type="stmt"/>
+        <line num="16" count="111" type="stmt"/>
+        <line num="17" count="111" type="stmt"/>
+        <line num="18" count="111" type="cond" truecount="4" falsecount="0"/>
+        <line num="19" count="48" type="cond" truecount="5" falsecount="0"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="22" count="45" type="cond" truecount="4" falsecount="1"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="45" type="cond" truecount="4" falsecount="0"/>
+        <line num="26" count="12" type="stmt"/>
+        <line num="28" count="33" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="21" type="stmt"/>
+        <line num="31" count="12" type="stmt"/>
+        <line num="33" count="63" type="cond" truecount="4" falsecount="0"/>
+        <line num="34" count="27" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="37" count="24" type="stmt"/>
+        <line num="39" count="36" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="6" type="stmt"/>
+        <line num="42" count="30" type="stmt"/>
+        <line num="44" count="21" type="stmt"/>
+        <line num="47" count="9" type="stmt"/>
+        <line num="48" count="9" type="stmt"/>
+        <line num="49" count="9" type="stmt"/>
         <line num="51" count="9" type="stmt"/>
-        <line num="52" count="21" type="stmt"/>
-        <line num="54" count="21" type="stmt"/>
-        <line num="55" count="111" type="stmt"/>
-        <line num="56" count="111" type="stmt"/>
-        <line num="57" count="111" type="cond" truecount="4" falsecount="0"/>
-        <line num="58" count="48" type="cond" truecount="5" falsecount="0"/>
-        <line num="59" count="3" type="stmt"/>
-        <line num="63" count="45" type="cond" truecount="4" falsecount="1"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="68" count="45" type="cond" truecount="4" falsecount="0"/>
-        <line num="69" count="12" type="stmt"/>
-        <line num="72" count="33" type="cond" truecount="2" falsecount="0"/>
-        <line num="73" count="21" type="stmt"/>
-        <line num="76" count="12" type="stmt"/>
-        <line num="80" count="63" type="cond" truecount="4" falsecount="0"/>
-        <line num="81" count="27" type="cond" truecount="2" falsecount="0"/>
-        <line num="82" count="3" type="stmt"/>
-        <line num="85" count="24" type="stmt"/>
-        <line num="88" count="36" type="cond" truecount="2" falsecount="0"/>
-        <line num="89" count="6" type="stmt"/>
-        <line num="92" count="30" type="stmt"/>
-        <line num="96" count="21" type="stmt"/>
-        <line num="99" count="9" type="stmt"/>
-        <line num="100" count="9" type="stmt"/>
-        <line num="101" count="9" type="stmt"/>
-        <line num="103" count="9" type="stmt"/>
-        <line num="107" count="9" type="stmt"/>
-        <line num="108" count="9" type="stmt"/>
+        <line num="55" count="9" type="stmt"/>
+        <line num="56" count="9" type="stmt"/>
       </file>
       <file name="parsers.js" path="/home/prozex/frontend-project-lvl2/src/parsers.js">
         <metrics statements="5" coveredstatements="4" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
