@@ -10,7 +10,7 @@ const objToArr = (obj) => {
 
 const getDiff = (filePath1, filePath2) => {
   const getDiffs = (obj1, obj2) => {
-    const keys = [..._.uniq(_.concat(Object.keys(obj1), Object.keys(obj2)))].sort();
+    const keys = _.sortBy(_.uniq(_.concat(Object.keys(obj1), Object.keys(obj2))));
 
     const res = keys.reduce((arr, key) => {
       const in1 = _.has(obj1, key);
