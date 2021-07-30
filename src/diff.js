@@ -30,7 +30,7 @@ const getDiff = (filePath1, filePath2) => {
         }
         return [...arr, ['-', key, obj1[key]], ['+', key, obj2[key]]];
       }
-      if (in1 && !in2) {
+      if (!in2) {
         if (typeof obj1[key] === 'object') {
           return [...arr, ['-', key, objToArr(obj1[key])]];
         }
