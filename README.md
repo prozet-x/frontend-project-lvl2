@@ -3,8 +3,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/aec0c10a7e0b529615cc/maintainability)](https://codeclimate.com/github/prozet-x/frontend-project-lvl2/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/aec0c10a7e0b529615cc/test_coverage)](https://codeclimate.com/github/prozet-x/frontend-project-lvl2/test_coverage)
 [![Build Status](https://travis-ci.com/prozet-x/frontend-project-lvl2.svg?branch=main)](https://travis-ci.com/prozet-x/frontend-project-lvl2)
-https://asciinema.org/a/lajAw0m30jJUIFFDZSYMg9DIN
-https://asciinema.org/a/8Il9wwDiMiZP2Vbpjz0g5TcWv
-https://asciinema.org/a/ZowCcULOptPAHWWpyLzVhl0bhgit
-https://asciinema.org/a/WOAp4YR4dnBjbK42Or0XPfWx8
-https://asciinema.org/a/peg0yTVz8criR6jjl0P03Uev8
+[![asciicast](https://asciinema.org/a/lajAw0m30jJUIFFDZSYMg9DIN.svg)](https://asciinema.org/a/lajAw0m30jJUIFFDZSYMg9DIN)
+[![asciicast](https://asciinema.org/a/8Il9wwDiMiZP2Vbpjz0g5TcWv.svg)](https://asciinema.org/a/8Il9wwDiMiZP2Vbpjz0g5TcWv)
+[![asciicast](https://asciinema.org/a/ZowCcULOptPAHWWpyLzVhl0bh.svg)](https://asciinema.org/a/ZowCcULOptPAHWWpyLzVhl0bh)
+[![asciicast](https://asciinema.org/a/WOAp4YR4dnBjbK42Or0XPfWx8.svg)](https://asciinema.org/a/WOAp4YR4dnBjbK42Or0XPfWx8)
+[![asciicast](https://asciinema.org/a/peg0yTVz8criR6jjl0P03Uev8.svg)](https://asciinema.org/a/peg0yTVz8criR6jjl0P03Uev8)
