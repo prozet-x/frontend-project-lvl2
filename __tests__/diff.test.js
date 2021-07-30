@@ -3,168 +3,49 @@ import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import genDiff from '../src/diff';
 
-const getFixturePath = (fileName) => path.join(dirname(fileURLToPath(import.meta.url)), '..', '__fixtures__', fileName);
+import flatDiff1 from '../__fixtures__/flatDiff1';
+import flatDiff2 from '../__fixtures__/flatDiff2';
+import stylishDiff from '../__fixtures__/stylishDiff';
+import plainDiff from '../__fixtures__/plainDiff';
+import jsonDiff from '../__fixtures__/jsonDiff';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const getFixturePath = (fileName) => path.join(__dirname, '..', '__fixtures__', fileName);
 
 test('JSONPlainTest1', () => {
-  const should = '{\n'
-    .concat('    follow: false\n')
-    .concat('    host: hexlet.io\n')
-    .concat('  - old: true\n')
-    .concat('  - pres: Dima\n')
-    .concat('  + pres: Vova\n')
-    .concat('    proxy: 123.234.53.22\n')
-    .concat('    timeout: 50\n')
-    .concat('  + yuong: true\n')
-    .concat('}');
-  expect(genDiff(getFixturePath('test11.json'), getFixturePath('test12.json'))).toEqual(should);
+  expect(genDiff(getFixturePath('test11.json'), getFixturePath('test12.json'))).toEqual(flatDiff1);
 });
 
 test('JSONPlainTest2', () => {
-  const should = '{\n'
-    .concat('  + follow: false\n')
-    .concat('  - follow1: false\n')
-    .concat('  + host: hexlet.io\n')
-    .concat('  - host1: hexlet.io\n')
-    .concat('  - old1: true\n')
-    .concat('  + pres: Vova\n')
-    .concat('  - pres1: Dima\n')
-    .concat('  + proxy: 123.234.53.22\n')
-    .concat('  - proxy1: 123.234.53.22\n')
-    .concat('  + timeout: 50\n')
-    .concat('  - timeout1: 50\n')
-    .concat('  + yuong: true\n')
-    .concat('}');
-  expect(genDiff(getFixturePath('test21.json'), getFixturePath('test22.json'))).toEqual(should);
+  expect(genDiff(getFixturePath('test21.json'), getFixturePath('test22.json'))).toEqual(flatDiff2);
 });
 
 test('YMLPlainTest1', () => {
-  const should = '{\n'
-    .concat('    follow: false\n')
-    .concat('    host: hexlet.io\n')
-    .concat('  - old: true\n')
-    .concat('  - pres: Dima\n')
-    .concat('  + pres: Vova\n')
-    .concat('    proxy: 123.234.53.22\n')
-    .concat('    timeout: 50\n')
-    .concat('  + yuong: true\n')
-    .concat('}');
-  expect(genDiff(getFixturePath('test11.yml'), getFixturePath('test12.yaml'))).toEqual(should);
+  expect(genDiff(getFixturePath('test11.yml'), getFixturePath('test12.yaml'))).toEqual(flatDiff1);
 });
 
 test('YMLPlainTest2', () => {
-  const should = '{\n'
-    .concat('  + follow: false\n')
-    .concat('  - follow1: false\n')
-    .concat('  + host: hexlet.io\n')
-    .concat('  - host1: hexlet.io\n')
-    .concat('  - old1: true\n')
-    .concat('  + pres: Vova\n')
-    .concat('  - pres1: Dima\n')
-    .concat('  + proxy: 123.234.53.22\n')
-    .concat('  - proxy1: 123.234.53.22\n')
-    .concat('  + timeout: 50\n')
-    .concat('  - timeout1: 50\n')
-    .concat('  + yuong: true\n')
-    .concat('}');
-  expect(genDiff(getFixturePath('test21.yaml'), getFixturePath('test22.yml'))).toEqual(should);
+  expect(genDiff(getFixturePath('test21.yaml'), getFixturePath('test22.yml'))).toEqual(flatDiff2);
 });
 
 test('YMLJSONPlainTest1', () => {
-  const should = '{\n'
-    .concat('    follow: false\n')
-    .concat('    host: hexlet.io\n')
-    .concat('  - old: true\n')
-    .concat('  - pres: Dima\n')
-    .concat('  + pres: Vova\n')
-    .concat('    proxy: 123.234.53.22\n')
-    .concat('    timeout: 50\n')
-    .concat('  + yuong: true\n')
-    .concat('}');
-  expect(genDiff(getFixturePath('test11.yml'), getFixturePath('test12.json'))).toEqual(should);
+  expect(genDiff(getFixturePath('test11.yml'), getFixturePath('test12.json'))).toEqual(flatDiff1);
 });
 
 test('JSONYMLPlainTest2', () => {
-  const should = '{\n'
-    .concat('  + follow: false\n')
-    .concat('  - follow1: false\n')
-    .concat('  + host: hexlet.io\n')
-    .concat('  - host1: hexlet.io\n')
-    .concat('  - old1: true\n')
-    .concat('  + pres: Vova\n')
-    .concat('  - pres1: Dima\n')
-    .concat('  + proxy: 123.234.53.22\n')
-    .concat('  - proxy1: 123.234.53.22\n')
-    .concat('  + timeout: 50\n')
-    .concat('  - timeout1: 50\n')
-    .concat('  + yuong: true\n')
-    .concat('}');
-  expect(genDiff(getFixturePath('test21.json'), getFixturePath('test22.yaml'))).toEqual(should);
+  expect(genDiff(getFixturePath('test21.json'), getFixturePath('test22.yaml'))).toEqual(flatDiff2);
 });
 
 test('recursionTestStylish', () => {
-  const should = '{\n'
-    .concat('    common: {\n')
-    .concat('      + follow: false\n')
-    .concat('        setting1: Value 1\n')
-    .concat('      - setting2: 200\n')
-    .concat('      - setting3: true\n')
-    .concat('      + setting3: null\n')
-    .concat('      + setting4: blah blah\n')
-    .concat('      + setting5: {\n')
-    .concat('            key5: value5\n')
-    .concat('        }\n')
-    .concat('        setting6: {\n')
-    .concat('            doge: {\n')
-    .concat('              - wow: \n')
-    .concat('              + wow: so much\n')
-    .concat('            }\n')
-    .concat('            key: value\n')
-    .concat('          + ops: vops\n')
-    .concat('        }\n')
-    .concat('    }\n')
-    .concat('    group1: {\n')
-    .concat('      - baz: bas\n')
-    .concat('      + baz: bars\n')
-    .concat('        foo: bar\n')
-    .concat('      - nest: {\n')
-    .concat('            key: value\n')
-    .concat('        }\n')
-    .concat('      + nest: str\n')
-    .concat('    }\n')
-    .concat('  - group2: {\n')
-    .concat('        abc: 12345\n')
-    .concat('        deep: {\n')
-    .concat('            id: 45\n')
-    .concat('        }\n')
-    .concat('    }\n')
-    .concat('  + group3: {\n')
-    .concat('        deep: {\n')
-    .concat('            id: {\n')
-    .concat('                number: 45\n')
-    .concat('            }\n')
-    .concat('        }\n')
-    .concat('        fee: 100500\n')
-    .concat('    }\n')
-    .concat('}');
-  expect(genDiff(getFixturePath('test1.json'), getFixturePath('test2.yml'))).toEqual(should);
+  expect(genDiff(getFixturePath('test1.json'), getFixturePath('test2.yml'))).toEqual(stylishDiff);
 });
 
 test('recursionTestPlain', () => {
-  const should = 'Property \'common.follow\' was added with value: false\n'
-    .concat('Property \'common.setting2\' was removed\n')
-    .concat('Property \'common.setting3\' was updated. From true to null\n')
-    .concat('Property \'common.setting4\' was added with value: \'blah blah\'\n')
-    .concat('Property \'common.setting5\' was added with value: [complex value]\n')
-    .concat('Property \'common.setting6.doge.wow\' was updated. From \'\' to \'so much\'\n')
-    .concat('Property \'common.setting6.ops\' was added with value: \'vops\'\n')
-    .concat('Property \'group1.baz\' was updated. From \'bas\' to \'bars\'\n')
-    .concat('Property \'group1.nest\' was updated. From [complex value] to \'str\'\n')
-    .concat('Property \'group2\' was removed\n')
-    .concat('Property \'group3\' was added with value: [complex value]');
-  expect(genDiff(getFixturePath('test1.json'), getFixturePath('test2.yml'), 'plain')).toEqual(should);
+  expect(genDiff(getFixturePath('test1.json'), getFixturePath('test2.yml'), 'plain')).toEqual(plainDiff);
 });
 
 test('recursionTestJSON', () => {
-  const should = '[{"name":"common","status":"no changes","value":[{"name":"follow","status":"added","value":false},{"name":"setting1","status":"no changes","value":"Value 1"},{"name":"setting2","status":"deleted","value":200},{"name":"setting3","status":"deleted","value":true},{"name":"setting3","status":"added","value":null},{"name":"setting4","status":"added","value":"blah blah"},{"name":"setting5","status":"added","value":[{"name":"key5","status":"no changes","value":"value5"}]},{"name":"setting6","status":"no changes","value":[{"name":"doge","status":"no changes","value":[{"name":"wow","status":"deleted","value":""},{"name":"wow","status":"added","value":"so much"}]},{"name":"key","status":"no changes","value":"value"},{"name":"ops","status":"added","value":"vops"}]}]},{"name":"group1","status":"no changes","value":[{"name":"baz","status":"deleted","value":"bas"},{"name":"baz","status":"added","value":"bars"},{"name":"foo","status":"no changes","value":"bar"},{"name":"nest","status":"deleted","value":[{"name":"key","status":"no changes","value":"value"}]},{"name":"nest","status":"added","value":"str"}]},{"name":"group2","status":"deleted","value":[{"name":"abc","status":"no changes","value":12345},{"name":"deep","status":"no changes","value":[{"name":"id","status":"no changes","value":45}]}]},{"name":"group3","status":"added","value":[{"name":"deep","status":"no changes","value":[{"name":"id","status":"no changes","value":[{"name":"number","status":"no changes","value":45}]}]},{"name":"fee","status":"no changes","value":100500}]}]';
-  expect(genDiff(getFixturePath('test1.json'), getFixturePath('test2.yml'), 'json')).toEqual(should);
+  expect(genDiff(getFixturePath('test1.json'), getFixturePath('test2.yml'), 'json')).toEqual(jsonDiff);
 });

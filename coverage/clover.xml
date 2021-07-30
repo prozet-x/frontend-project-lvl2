@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1627558728874" clover="3.2.0">
-  <project timestamp="1627558728874" name="All files">
-    <metrics statements="81" coveredstatements="79" conditionals="73" coveredconditionals="69" methods="21" coveredmethods="21" elements="175" coveredelements="169" complexity="0" loc="81" ncloc="81" packages="2" files="6" classes="6"/>
+<coverage generated="1627639224103" clover="3.2.0">
+  <project timestamp="1627639224103" name="All files">
+    <metrics statements="81" coveredstatements="79" conditionals="73" coveredconditionals="69" methods="21" coveredmethods="21" elements="175" coveredelements="169" complexity="0" loc="81" ncloc="81" packages="3" files="11" classes="11"/>
+    <package name="__fixtures__">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="flatDiff1.js" path="/home/prozex/frontend-project-lvl2/__fixtures__/flatDiff1.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="flatDiff2.js" path="/home/prozex/frontend-project-lvl2/__fixtures__/flatDiff2.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="jsonDiff.js" path="/home/prozex/frontend-project-lvl2/__fixtures__/jsonDiff.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="plainDiff.js" path="/home/prozex/frontend-project-lvl2/__fixtures__/plainDiff.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="stylishDiff.js" path="/home/prozex/frontend-project-lvl2/__fixtures__/stylishDiff.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
     <package name="formatters">
       <metrics statements="42" coveredstatements="42" conditionals="37" coveredconditionals="35" methods="14" coveredmethods="14"/>
       <file name="index.js" path="/home/prozex/frontend-project-lvl2/formatters/index.js">
@@ -56,7 +74,7 @@
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
         <line num="1" count="102" type="stmt"/>
         <line num="4" count="91" type="stmt"/>
-        <line num="24" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
       </file>
     </package>
     <package name="src">
