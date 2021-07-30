@@ -3,6 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/aec0c10a7e0b529615cc/maintainability)](https://codeclimate.com/github/prozet-x/frontend-project-lvl2/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/aec0c10a7e0b529615cc/test_coverage)](https://codeclimate.com/github/prozet-x/frontend-project-lvl2/test_coverage)
 [![Build Status](https://travis-ci.com/prozet-x/frontend-project-lvl2.svg?branch=main)](https://travis-ci.com/prozet-x/frontend-project-lvl2)
+
 Package for structured files comparing. You can get difference for json or yml files. Difference can be formatted in stylish, plain text or json format.
 ## Run lint
 `make lint`
