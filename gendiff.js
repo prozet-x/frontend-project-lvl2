@@ -2,16 +2,6 @@
 import { Command } from 'commander';
 import makeDiff from './src/diff.js';
 
-/* const makeDiffAndOut = (filepath1, filepath2, options) => {
-  const result = (options.format !== 'stylish')
-    && (options.format !== 'plain')
-    && (options.format !== 'json')
-    ? 'Bad formatter name!'
-    : makeDiff(filepath1, filepath2, options.format);
-  console.log(result);
-  return result;
-}; */
-
 const program = new Command();
 program
   .version('1.0.0')
@@ -29,5 +19,3 @@ program
   });
 
 program.parse(process.argv);
-
-// export default makeDiffAndOut;
